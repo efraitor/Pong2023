@@ -44,6 +44,15 @@ public class Ball : MonoBehaviour
             //Le decimos a la bola que salga con esa velocidad previamente calculada
             GetComponent<Rigidbody2D>().velocity = direction * speed;
         }
+        //Si la pelota ha colisionado con la pala derecha
+        if (collision.gameObject.name == "RacketRight")
+        {
+            //Obtenemos el factor de golpeo, pasándole la posición de la pelota, la posición de la pala, y lo que mide de alto el collider de la pala(es decir, lo que mide la pala)
+            float yF = HitFactor(transform.position, collision.transform.position, collision.collider.bounds.size.y);
+            Vector2 direction = new Vector2(-1, yF).normalized;
+            //Le decimos a la bola que salga con esa velocidad previamente calculada
+            GetComponent<Rigidbody2D>().velocity = direction * speed;
+        }
     }
 
     /*
