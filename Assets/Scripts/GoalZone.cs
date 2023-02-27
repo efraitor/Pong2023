@@ -10,6 +10,9 @@ public class GoalZone : MonoBehaviour
     //Variable para guardar los puntos marcados
     int score;
 
+    //Creamos una referencia al GameManager
+    public GameManager reference;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +45,8 @@ public class GoalZone : MonoBehaviour
             score++; //score++ <-> score = score + 1 <-> score += 1
             //Cambiamos el texto de las puntuaciones al valor que tenga en ese momento el score
             scoreText.text = score.ToString();
+            //Ejecuto el método de que se ha marcado un gol, que está programado en el GameManager
+            reference.GoalScored();
         }
     }
 }

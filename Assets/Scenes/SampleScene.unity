@@ -1605,6 +1605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1667031553}
+  reference: {fileID: 1869692613}
 --- !u!1 &1401236356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,6 +2096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 223438240}
+  reference: {fileID: 1869692613}
 --- !u!1 &1869692612
 GameObject:
   m_ObjectHideFlags: 0
